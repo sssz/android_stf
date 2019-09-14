@@ -21,3 +21,23 @@ export   JRE_HOME=$JAVA_HOME/jre
 source /etc/profile
 java -version
 
+#intall android sdk
+https://qianngchn.github.io/wiki/8.html
+
+
+#install nodejs
+#推荐8.1.2版本
+https://blog.csdn.net/mrzhouxiaofei/article/details/66974644
+仍然通过设置PATH的方式设置npm
+
+#install bower
+su
+npm install bower -g
+
+
+
+其他的：
+https://www.cnblogs.com/gaigaige/p/9399273.html
+
+最后安全stf
+sudo npm install -g stf --unsafe --perm
