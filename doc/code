@@ -1,2 +1,19 @@
 reference:
     https://blog.csdn.net/weixin_43164644/article/details/82823176
+    https://testerhome.com/topics/11723
+
+传输屏幕：
+    https://testerhome.com/topics/8851
+    1，js服务器接受屏幕图片：
+    lib/utils/device/plugins/screen/stream.js 如何讲某个id的屏幕传输给浏览器之后，浏览器显示到对应的id上·
+    2, 浏览器显示屏幕图片：
+    app/components/stf/screen/screen-directive.js
+传输点击事件：
+    https://testerhome.com/topics/8900
+
+
+
+DeviceService
+getDevice
+
+
