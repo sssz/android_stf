@@ -1,0 +1,36 @@
+yargs: 
+    https://github.com/yargs/yargs
+    nodejs的自定义命令行工具
+
+
+
+
+reference： https://www.jianshu.com/p/fef668d61085
+
+启动：
+package.json: 
+-> ./bin/stf 
+->./lib/cli/please.js
+->./lib/cli/index.js
+使用.command(module)设置了很多子命令
+可以把它们都看作传递一个module给yargs，这个module必须导出四个变量
+cmd, desc [builder], [handler]，其中builder和handler是方法，另外两个是字符串
+主要是builder和handler
+builder： 从命令行读取参数，解析为argv, 并将argv传递给handler
+handler： 接受builder处理的argv， 并执行
+
+
+
+命令：$stf local
+->local/index.js
+
+builder: 
+    .option() 设置参数和默认值
+example： 
+    .option('adb-host', {
+      describe: 'The ADB server host.'
+    , type: 'string'
+    , default: '127.0.0.1'
+    })
+
+    相当于在命令行中添加--adb-host="127.0.0.1" 可以通过argv.adb-host 或者argv.adbHost来访问这个参数

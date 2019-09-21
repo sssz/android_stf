@@ -1,0 +1,23 @@
+promise: 
+    js 异步执行回调的库
+/lib/util/procutil.js:
+    基于js的child_process和Promise封装， 用于创建一个Promise.all(promiseArray)的promiseArray中的一个元素
+    创建一个子进程，子进程像父进程发消息：
+        exit: code 表示子进程成功运行，并返回code的结束码
+        error: 表示子进程执行失败
+
+    promiss.all(promiseArray).then().catch()
+        promiseArray所有都执行成功，则返回并执行then
+        promiseArray任何一个执行失败，则执行catch()
+
+在stf中，stf local 为父进程, 使用cli/index.js做路由启动进程
+    1，执行migrate： database 连接rethinkdb
+    2，
+        创建了一系列子进程
+        procutil.fork(path.resolve(__dirname, '..'), [
+          'triproxy', 'app001'
+        , '--bind-pub', argv.bindAppPub
+        , '--bind-dealer', argv.bindAppDealer
+        , '--bind-pull', argv.bindAppPull
+        ])
+        启动triproxy/index.js 进程名为name， 参数为argv.bindAppPub, argv.bindAppDealer, argv.bindAppPull
