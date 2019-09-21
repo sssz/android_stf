@@ -1,0 +1,47 @@
+Express
+http://www.expressjs.com.cn
+Express 是一个保持最小规模的灵活的 Node.js Web 应用程序开发框架，为 Web 和移动应用程序提供一组强大的功能。
+
+
+使用express的文件
+stf/lib/units/api/index.js
+stf/lib/units/app/index.js
+stf/lib/units/prooxy/index.js
+
+
+涉及到的用法
+var express = require(‘express’)
+var app = express()
+	app: express 的对象
+var server = http.createServer(app) 
+	创建http服务器
+
+
+app.use() :
+	添加中间件或模块，包括以下几种用法
+	app.use(function (req, res, next) {})
+	app.use('/user/:id', function (req, res, next) {})
+	app.use( 第三方中间件() )
+
+
+路由：
+app.get('/', function (req, res) {})
+app.post(‘/‘, function (req, res) {})
+app.all(‘/‘, function (req, res) {})
+req：request
+res：response
+
+
+模版引擎：设置使用第三方的模版引擎
+app.set('view engine', 'pug')
+
+
+server.listen(options.port)
+	监听接口
+
+
+
+其他方法
+express.json([options])
+express.static(root, [options])
+express.Router([options])
