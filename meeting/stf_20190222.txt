@@ -1,0 +1,16 @@
+20190922
+triproxy:
+ pull 的消息发到dealer上
+dealer上的消息发到pub上
+
+任务
+1，websocket(1000), notify(100)
+reaper(100), processor(246), 
+dev(一堆), provider（400）
+api, app
+
+2, 弄清前端使用的 port
+
+3， 参照例子，实现
+批量安装 APKhttps://testerhome.com/topics/11723 @zhoujing @butiaotong
+多机同屏控制https://juejin.im/entry/58353fa30ce46300588aaf9e @xiaojifan @zhoushaobo
