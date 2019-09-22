@@ -36,6 +36,8 @@ res：response
 
 模版引擎：设置使用第三方的模版引擎
 app.set('view engine', 'pug')
+app.set(name, value)：
+给name设置项赋value值，name是app settings table中属性的一项。 
 
 
 server.listen(options.port)
