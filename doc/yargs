@@ -21,6 +21,7 @@ handler： 接受builder处理的argv， 并执行
 
 
 
+
 命令：$stf local
 ->local/index.js
 
@@ -34,3 +35,10 @@ example：
     })
 
     相当于在命令行中添加--adb-host="127.0.0.1" 可以通过argv.adb-host 或者argv.adbHost来访问这个参数
+
+example:
+stf local --x=1 --hello-world=2
+yargs -> argv
+argv.x =1 
+argv.hello-world=2
+argv.helloWorld=2
