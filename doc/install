@@ -39,6 +39,9 @@ npm install bower -g
 其他的：
 https://www.cnblogs.com/gaigaige/p/9399273.html
 
+sudo apt-get install nasm
+sudo apt-get install libtool
+sudo apt-get install yasm
 sudo npm install -g jpeg-turbo --unsafe-perm
 最后安全stf
 sudo npm install -g stf --unsafe-perm
